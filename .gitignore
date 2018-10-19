@@ -1,8 +1,10 @@
 # Ignore all logfiles and tempfiles.
-#log/*
-#tmp/*
+/log/*
+/log/development.log
+/tmp/*
 !/log/.keep
 !/tmp/.keep
+!/tmp/pids
 
 # vscode
 /.vscode/
