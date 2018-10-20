@@ -9,10 +9,14 @@ gem 'rails', '~> 5.2.1'
 gem 'rails-i18n'
 # Manage Procfile-based applications
 gem 'foreman'
+# Ruby/Graphviz provides an interface to layout and generate images of directed graphs in a variety of formats (PostScript, PNG, etc.) using GraphViz.
+gem 'ruby-graphviz', '~> 1.2', '>= 1.2.3'
 # Flexible authentication solution for Rails with Warden
 gem 'devise'
 # Translations for the devise gem
 gem 'devise-i18n'
+# Rails gem of the Bootstrap based admin theme SB Admin 2
+gem 'bootstrap_sb_admin_base_v2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -54,6 +58,8 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  # Generate Entity-Relationship Diagrams for Rails applications
+  gem 'rails-erd'
 end
 
 
