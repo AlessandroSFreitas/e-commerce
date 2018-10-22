@@ -1,17 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Informações sobre o projeto EasyTrade
 
 * Ruby version
+2.4.4-2-x64 with MSYS2
 
 * System dependencies
 
 * Configuration
 
-* Database creation
+* Database information
+SQLITE database
 
 * Database initialization
 
@@ -20,5 +19,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
