@@ -1,11 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Abaixo algumas informações sobre o projeto e-commerce (EasyTrade)
 
 * Ruby version
+2.4.4-2-x64 with MSYS2
 
 * System dependencies
 
