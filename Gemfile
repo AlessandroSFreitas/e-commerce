@@ -23,6 +23,8 @@ gem 'rails-assets-bootstrap', '4.1.1', source: 'https://rails-assets.org'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+# BDD for Ruby
+gem 'rspec', '~> 3.8'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
