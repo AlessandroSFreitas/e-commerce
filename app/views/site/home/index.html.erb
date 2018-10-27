@@ -2,18 +2,11 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-3">
-      <h1 class="my-4">EasyTrade</h1>
+      <h1 class="my-4">Categorias</h1>
       <div class="list-group">
-        <a href="#" class="list-group-item">Animais e Acessórios</a>
-        <a href="#" class="list-group-item">Esportes</a>
-        <a href="#" class="list-group-item">Para a sua casa</a>
-        <a href="#" class="list-group-item">Eletrônicos e Celulares</a>
-        <a href="#" class="list-group-item">Música e hobbies</a>
-        <a href="#" class="list-group-item">Bebês e crianças</a>
-        <a href="#" class="list-group-item">Moda e beleza</a>
-        <a href="#" class="list-group-item">Veículos e barcos</a>
-        <a href="#" class="list-group-item">Imóveis</a>
-        <a href="#" class="list-group-item">Empregos e negócios</a>
+        <% @categories.each do |category| %>
+          <a href="#" class="list-group-item"><%= category.description %></a>
+        <% end %>
       </div>
     </div>
     <!-- /.col-lg-3 -->
