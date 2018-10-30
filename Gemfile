@@ -59,6 +59,7 @@ group :development, :test do
   # Provides a better error page for Rails and other Rack apps. Includes source code inspection, a live REPL and local/instance variable inspection for all stack frames.
   gem 'better_errors'
   gem 'pry-byebug'
+  gem 'sqlite3'
 end
 
 group :development do
