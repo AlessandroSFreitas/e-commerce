@@ -10,7 +10,7 @@ gem 'rails-i18n'
 # Manage Procfile-based applications
 gem 'foreman'
 # Ruby/Graphviz provides an interface to layout and generate images of directed graphs in a variety of formats (PostScript, PNG, etc.) using GraphViz.
-gem 'ruby-graphviz', '~> 1.2', '>= 1.2.3'
+# gem 'ruby-graphviz', '~> 1.2', '>= 1.2.3'
 # Flexible authentication solution for Rails with Warden
 gem 'devise'
 # Translations for the devise gem
