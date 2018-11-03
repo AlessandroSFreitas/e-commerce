@@ -9,8 +9,6 @@ gem 'rails', '~> 5.2.1'
 gem 'rails-i18n'
 # Manage Procfile-based applications
 gem 'foreman'
-# Ruby/Graphviz provides an interface to layout and generate images of directed graphs in a variety of formats (PostScript, PNG, etc.) using GraphViz.
-# gem 'ruby-graphviz', '~> 1.2', '>= 1.2.3'
 # Flexible authentication solution for Rails with Warden
 gem 'devise'
 # Translations for the devise gem
@@ -22,7 +20,7 @@ gem 'rails-assets-bootstrap', '4.1.1', source: 'https://rails-assets.org'
 # NotifyJS
 gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
+gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # BDD for Ruby
@@ -61,7 +59,6 @@ group :development, :test do
   # Provides a better error page for Rails and other Rack apps. Includes source code inspection, a live REPL and local/instance variable inspection for all stack frames.
   gem 'better_errors'
   gem 'pry-byebug'
-  gem 'sqlite3'
 end
 
 group :development do
@@ -74,7 +71,6 @@ end
 group :production do
   gem 'pg'
 end
-
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
