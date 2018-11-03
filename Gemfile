@@ -15,10 +15,16 @@ gem 'devise'
 gem 'devise-i18n'
 # Rails gem of the Bootstrap based admin theme SB Admin 2
 gem 'bootstrap_sb_admin_base_v2'
-# Bootstrap
-gem 'rails-assets-bootstrap', '4.1.1', source: 'https://rails-assets.org'
-# NotifyJS
-gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+
+source 'https://rails-assets.org' do
+  # Bootstrap
+  gem 'rails-assets-bootstrap', '4.1.1'
+  # NotifyJS
+  gem 'rails-assets-notifyjs'
+  # BootboxJS
+  gem 'rails-assets-bootbox'
+end
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
