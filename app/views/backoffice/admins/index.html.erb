@@ -3,10 +3,12 @@
   <div class="panel panel-default">
     <div class="panel-heading">
         Lista de Administradores
-        <%= link_to new_backoffice_admin_path,
-          class: "btn btn-success pull-right",
-          style: "margin-top: -7px" do %>
-          Criar
+        <% if policy(@admins).new? %>
+          <%= link_to new_backoffice_admin_path,
+            class: "btn btn-success pull-right",
+            style: "margin-top: -7px" do %>
+            Criar
+          <% end %>
         <% end %>
     </div>
     <div class="panel-body">
