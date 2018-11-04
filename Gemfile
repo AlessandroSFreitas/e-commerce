@@ -60,6 +60,8 @@ gem 'capistrano-yarn', '~> 2.0', '>= 2.0.2'
 gem 'bootsnap', '>= 1.1.0', require: false
 # Help ActiveRecord::Enum feature to work fine with I18n and simple_form
 gem 'enum_help'
+# Object oriented authorization for Rails applications
+gem 'pundit'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

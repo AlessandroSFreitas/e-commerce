@@ -7,6 +7,7 @@ class Backoffice::AdminsController < BackofficeController
 
   def new
     @admin = Admin.new
+    authorize @admin
   end
 
   def create
@@ -31,7 +32,7 @@ class Backoffice::AdminsController < BackofficeController
     end
 
     if @admin.update(params_admin)
-      redirect_to backoffice_admins_path, notice: "O administrador (#{@admin.email}) foi atualizado com sucesso!"
+      redirect_to backoffice_admins_path, notice: I18n.t('messages.created_with', item: @admin.name)
     else
       render :edit
     end
