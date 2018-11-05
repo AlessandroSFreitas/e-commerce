@@ -1,8 +1,10 @@
 class Backoffice::AdminsController < BackofficeController
   before_action :set_admin, only: [:edit, :update, :destroy]
+  after_action :verify_authorized, only: :new
+  after_action :verify_policy_scoped, only: :index
 
   def index
-    @admins = Admin.all
+    @admins = policy_scope(Admin)
   end
 
   def new
@@ -32,7 +34,7 @@ class Backoffice::AdminsController < BackofficeController
     end
 
     if @admin.update(params_admin)
-      redirect_to backoffice_admins_path, notice: I18n.t('messages.created_with', item: @admin.name)
+      redirect_to backoffice_admins_path, notice: I18n.t('messages.updated_with', item: @admin.name)
     else
       render :edit
     end
