@@ -1,6 +1,6 @@
 class Backoffice::AdminsController < BackofficeController
   before_action :set_admin, only: [:edit, :update, :destroy]
-  after_action :verify_authorized, only: :new
+  after_action :verify_authorized, only: [:new, :destroy]
   after_action :verify_policy_scoped, only: :index
 
   def index
@@ -41,10 +41,13 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def destroy
+    authorize @admin
+    admin_name = @admin.name
+
     if @admin.destroy
       redirect_to backoffice_admins_path, notice: "O administrador (#{@admin.email}) foi excluido com sucesso!"
     else
-      render :new
+      render :index
     end
   end
 
