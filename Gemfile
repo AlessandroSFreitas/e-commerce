@@ -76,6 +76,8 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   # Generate Entity-Relationship Diagrams for Rails applications
   gem 'rails-erd'
+  # Catches mail and serves it through a dream.
+  gem 'mailcatcher'
 end
 
 group :production do
