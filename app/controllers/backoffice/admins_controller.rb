@@ -15,7 +15,7 @@ class Backoffice::AdminsController < BackofficeController
   def create
     @admin = Admin.new(params_admin)
     if @admin.save
-      redirect_to backoffice_admins_path, notice: "O administrador (#{@admin.email}) foi cadastrado com sucesso"
+      redirect_to backoffice_admins_path, notice: I18n.t('messages.created_with', item: @admin.name)
     else
       render :new
     end
@@ -59,6 +59,13 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def params_admin
-    params.require(:admin).permit(policy(@admin).permitted_attributes)
+
+    binding.pry
+
+    if @admin.blank?
+      params.require(:admin).permit(:name, :email, :role, :password, :password_confirmation)
+    else
+      params.require(:admin).permit(policy(@admin).permitted_attributes)
+    end
   end
 end
