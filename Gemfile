@@ -16,7 +16,7 @@ gem 'devise-i18n'
 # Rails gem of the Bootstrap based admin theme SB Admin 2
 gem 'bootstrap_sb_admin_base_v2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # BDD for Ruby
@@ -76,6 +76,5 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
