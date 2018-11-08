@@ -59,9 +59,6 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def params_admin
-
-    binding.pry
-
     if @admin.blank?
       params.require(:admin).permit(:name, :email, :role, :password, :password_confirmation)
     else

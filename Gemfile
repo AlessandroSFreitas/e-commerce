@@ -46,8 +46,6 @@ gem 'pundit'
 gem 'faker'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-# When mail is sent from your application, Letter Opener will open a preview in the browser instead of sending.
-gem 'letter_opener'
 
 source 'https://rails-assets.org' do
   # Bootstrap
@@ -73,6 +71,8 @@ group :development do
   gem 'rails-erd'
   # Catches mail and serves it through a dream.
   gem 'mailcatcher'
+  # When mail is sent from your application, Letter Opener will open a preview in the browser instead of sending.
+  gem 'letter_opener'
 end
 
 group :production do

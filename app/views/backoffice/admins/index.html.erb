@@ -1,5 +1,5 @@
 <h1 class="page-header">Administradores</h1>
-<div class="col-lg-10">
+<div class="col-lg-12">
   <div class="panel panel-default">
     <div class="panel-heading">
         Lista de Administradores
@@ -18,8 +18,9 @@
             <tr>
               <th>#</th>
               <th>Nome Admin</th>
-              <th>Email</th>
+              <!--th>Email</th-->
               <th>Tipo de acesso</th>
+              <th>Mensagem</th>
               <th>Editar</th>
               <th>Excluir</th>
             </tr>
@@ -33,11 +34,17 @@
                 <td>
                   <%= admin.name %>
                 </td>
-                <td>
+                <!--td>
                   <%= admin.email %>
-                </td>
+                </td-->
                 <td>
                   <%= admin.role_i18n %>
+                </td>
+                <td>
+                  <%= link_to edit_backoffice_send_mail_path(admin),
+                    class: "btn btn-info btn-circle", remote: true do %>
+                    <i class="fa fa-envelope"></i>
+                  <% end %>
                 </td>
                 <td>
                   <%= link_to edit_backoffice_admin_path(admin),
@@ -62,3 +69,9 @@
     </div>
   </div>
 </div>
+
+<script>
+
+</script>
+
+<%= render partial: 'backoffice/admins/shared/send_mail' %>
