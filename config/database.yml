@@ -20,7 +20,7 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: <%= ENV['d1hkqfnlgto00h'] %>
+  database: easytrade_developement
   host: <%= ENV['ec2-54-83-38-174.compute-1.amazonaws.com'] %>
   username: <%= ENV['zqyrpxjtuxfnxv'] %>
   password: <%= ENV['93bbd32124559f7e3b78e3ba624ab7d0c813df23aff5d08667445412638f5f58'] %>
