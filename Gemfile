@@ -48,6 +48,8 @@ gem 'faker'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
 gem 'figaro'
+# When mail is sent from your application, Letter Opener will open a preview in the browser instead of sending.
+gem 'letter_opener', :group => :development
 
 source 'https://rails-assets.org' do
   # Bootstrap
@@ -73,8 +75,6 @@ group :development do
   gem 'rails-erd'
   # Catches mail and serves it through a dream.
   gem 'mailcatcher'
-  # When mail is sent from your application, Letter Opener will open a preview in the browser instead of sending.
-  gem 'letter_opener'
 end
 
 group :production do
