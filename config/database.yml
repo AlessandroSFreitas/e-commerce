@@ -20,8 +20,8 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: <%= d1hkqfnlgto00h %>
-  host: <%= ec2-54-83-38-174.compute-1.amazonaws.com %>
-  username: <%= zqyrpxjtuxfnxv %>
-  password: <%= 93bbd32124559f7e3b78e3ba624ab7d0c813df23aff5d08667445412638f5f58 %>
+  database: <%= ENV['d1hkqfnlgto00h'] %>
+  host: <%= ENV['ec2-54-83-38-174.compute-1.amazonaws.com'] %>
+  username: <%= ENV['zqyrpxjtuxfnxv'] %>
+  password: <%= ENV['93bbd32124559f7e3b78e3ba624ab7d0c813df23aff5d08667445412638f5f58'] %>
   pool: 30
