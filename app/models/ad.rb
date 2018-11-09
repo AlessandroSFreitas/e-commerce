@@ -1,4 +1,4 @@
 class Ad < ApplicationRecord
-  belongs_to :category
-  belongs_to :member
+  belongs_to :category, optional: true
+  belongs_to :member, optional: true
 end
