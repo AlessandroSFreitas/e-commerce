@@ -50,6 +50,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'figaro'
 # When mail is sent from your application, Letter Opener will open a preview in the browser instead of sending.
 gem 'letter_opener', :group => :development
+# Sidekiq
+gem 'sidekiq'
+# O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
+gem 'lerolero_generator'
 
 source 'https://rails-assets.org' do
   # Bootstrap
