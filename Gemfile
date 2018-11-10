@@ -56,6 +56,8 @@ gem 'sidekiq'
 gem 'lerolero_generator'
 # Integration of RubyMoney - Money with Rails
 gem 'money-rails'
+# Easy file attachment management for ActiveRecord C:\Program Files\ImageMagick-7.0.8-Q16\images
+gem 'paperclip'
 
 source 'https://rails-assets.org' do
   # Bootstrap
