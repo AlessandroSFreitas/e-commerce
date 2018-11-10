@@ -54,6 +54,8 @@ gem 'letter_opener', :group => :development
 gem 'sidekiq'
 # O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
 gem 'lerolero_generator'
+# Integration of RubyMoney - Money with Rails
+gem 'money-rails'
 
 source 'https://rails-assets.org' do
   # Bootstrap
