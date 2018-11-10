@@ -31,6 +31,7 @@ namespace :utils do
         member: Member.all.sample,
         category: Category.all.sample,
         price: "#{Random.rand(500)},#{Random.rand(99)}"
+        # picture: File.new(Rails.root.join('public', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
       )
     end
 
