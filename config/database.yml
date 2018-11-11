@@ -2,26 +2,27 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  host: localhost
-  username: postgres
-  password: "123456"
+  username: ecommerce
+  password: <%= ENV['DB_PASSWORD'] %>
 
 development:
   <<: *default
   database: easytrade_developement
   port: 5432
+  username: ecommerce
+  password: <%= ENV['DB_PASSWORD'] %>
 
 test:
   <<: *default
   adapter: postgresql
   database: easytrade_test
   encoding: unicode
+  username: ecommerce
+  password: <%= ENV['DB_PASSWORD'] %>
 
 production:
   <<: *default
   adapter: postgresql
   database: easytrade_developement
-  host: <%= ENV['ec2-54-83-38-174.compute-1.amazonaws.com'] %>
-  username: <%= ENV['zqyrpxjtuxfnxv'] %>
-  password: <%= ENV['93bbd32124559f7e3b78e3ba624ab7d0c813df23aff5d08667445412638f5f58'] %>
-  pool: 30
+  username: ecommerce
+  password: <%= ENV['DB_PASSWORD'] %>
