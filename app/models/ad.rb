@@ -6,4 +6,6 @@ class Ad < ApplicationRecord
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
 
   monetize :price_cents
+
+  scope :last_twelve_ads, -> { limit(12).order(created_at: :desc) }
 end
