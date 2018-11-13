@@ -1,4 +1,4 @@
-# rake utils:generate_ads
+# rake utils:generate_ads generate_admins generate_members
 
 namespace :utils do
   desc "Cria Administradores Fake"
