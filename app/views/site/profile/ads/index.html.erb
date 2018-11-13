@@ -1,10 +1,10 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Imagem</th>
-      <th scope="col">Descrição</th>
-      <th scope="col">Preço</th>
+      <th scope="col"><%= t("activerecord.attributes.ad.id") %></th>
+      <th scope="col"><%= t("activerecord.attributes.ad.image") %></th>
+      <th scope="col"><%= t("activerecord.attributes.ad.title") %></th>
+      <th scope="col"><%= t("activerecord.attributes.ad.price") %></th>
     </tr>
   </thead>
   <tbody>
@@ -12,7 +12,7 @@
       <tr>
         <th scope="row"><%= ad.id %></th>
         <td><%= image_tag ad.picture(:thumb) %></td>
-        <td><%= ad.description %></td>
+        <td><%= ad.title %></td>
         <td><%= humanized_money_with_symbol ad.price %></td>
       </tr>
     <% end %>

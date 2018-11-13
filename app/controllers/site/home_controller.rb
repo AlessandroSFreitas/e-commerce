@@ -2,6 +2,6 @@ class Site::HomeController < SiteController
 
   def index
     @categories = Category.order_by_description
-    @ads = Ad.last_twelve_ads
+    @ads = Ad.descending_order(12)
   end
 end
