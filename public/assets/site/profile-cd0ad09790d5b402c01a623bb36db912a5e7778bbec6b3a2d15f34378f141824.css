@@ -1,0 +1,145 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+/* line 8, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+body {
+  overflow-x: hidden;
+}
+
+/* line 12, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 20, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+/* line 24, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #343a40;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 39, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+/* line 43, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+/* line 49, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+/* Sidebar Styles */
+/* line 57, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 66, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+/* line 71, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+}
+
+/* line 77, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* line 83, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+/* line 87, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+/* line 93, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+/* line 97, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+@media (min-width: 768px) {
+  /* line 103, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+  #wrapper {
+    padding-left: 0;
+  }
+
+  /* line 106, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+
+  /* line 109, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+  #sidebar-wrapper {
+    width: 0;
+  }
+
+  /* line 112, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+
+  /* line 115, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+
+  /* line 119, C:/Users/aless/Desktop/ALESSANDRO/e-commerce/app/assets/stylesheets/site/profile.scss */
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
