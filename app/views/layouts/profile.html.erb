@@ -20,35 +20,19 @@
 
   <body>
     <%= render partial: 'layouts/site_shared/navigation' %>
-    <div id="wrapper">
+    <div id="wrapper" class="toggled">
       <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
           <li>
-            <a href="#">Dashboard</a>
+            <a href="#"><%= link_to t("profile_menu.dashboard"), site_profile_dashboard_index_path %></a>
           </li>
             <li>
-                <a href="#">Shortcuts</a>
-            </li>
-            <li>
-                <a href="#">Overview</a>
-            </li>
-            <li>
-                <a href="#">Events</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
+                <a href="#"><%= link_to t("profile_menu.my_ads"), site_profile_ads_path %></a>
             </li>
         </ul>
       </div>
       <div id="page-content-wrapper">
         <div class="container-fluid">
-          <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu de ações</a>
           <%= yield %>
         </div>
       </div>
@@ -56,10 +40,3 @@
     <%= render partial: 'layouts/site_shared/footer' %>
   </body>
 </html>
-
-<script>
-  $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-  });
-</script>
