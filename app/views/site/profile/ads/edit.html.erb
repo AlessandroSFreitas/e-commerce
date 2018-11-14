@@ -6,8 +6,8 @@
   </div>
   <div class="form-group">
     <%= f.label :picture %> <br>
-    <%= image_tag @ad.picture.url(:medium), class: "img-thumbnail" %>
     <%= f.file_field :picture %>
+    <%= image_tag @ad.picture.url(:medium), class: "img-thumbnail" %>
   </div>
   <div class="form-group">
     <%= f.label :description %>
