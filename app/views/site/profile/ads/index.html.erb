@@ -14,7 +14,7 @@
     <% @ads.each do |ad| %>
       <tr>
         <th scope="row"><%= ad.id %></th>
-        <td><%= image_tag ad.picture(:thumb) %></td>
+        <td></td>
         <td><%= ad.title %></td>
         <td><%= humanized_money_with_symbol ad.price %></td>
         <td>

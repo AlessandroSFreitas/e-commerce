@@ -6,7 +6,7 @@
   </div>
   <div class="form-group">
     <%= f.label :picture %> <br>
-    <%= image_tag @ad.picture.url(:medium), class: "img-thumbnail" %>
+    <%= image_tag @ad.picture, direct_upload: true %>
     <%= f.file_field :picture %>
   </div>
   <div class="form-group">
