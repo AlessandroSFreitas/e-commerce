@@ -1,3 +1,4 @@
+<h2>Listando anúncios de <%= current_member.email %></h2>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -5,6 +6,8 @@
       <th scope="col"><%= t("activerecord.attributes.ad.image") %></th>
       <th scope="col"><%= t("activerecord.attributes.ad.title") %></th>
       <th scope="col"><%= t("activerecord.attributes.ad.price") %></th>
+      <th scope="col"><%= t("buttons.edit") %></th>
+      <th scope="col"><%= t("buttons.destroy") %></th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +17,14 @@
         <td><%= image_tag ad.picture(:thumb) %></td>
         <td><%= ad.title %></td>
         <td><%= humanized_money_with_symbol ad.price %></td>
+        <td>
+          <%= link_to t("buttons.edit"), edit_site_profile_ad_path(ad.id), class: "btn btn-primary btn-sm" %>
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger btn-sm">
+            Apagar
+          </button>
+        </td>
       </tr>
     <% end %>
   </tbody>

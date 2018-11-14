@@ -1,0 +1,28 @@
+<h1>Editando Anúncio</h1>
+<%= form_for([:site, :profile, @ad]) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :picture %> <br>
+    <%= image_tag @ad.picture.url(:medium), class: "img-thumbnail" %>
+    <%= f.file_field :picture %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control", rows: 5 %>
+  </div>
+  <div class="form-group">
+    <%= f.label :category %>
+    <%= f.collection_select :category_id, Category.all, :id, :description, {}, { class: "form-control" } %>
+  </div>
+  <div class="form-group">
+    <%= f.label :price %>
+    <div class="input-group-prepend">
+      <span class="input-group-text"><%= @ad.price.currency.symbol %></span>
+      <%= f.text_field :price, class: "form-control" %>
+    </div>
+  </div>
+  <%= submit_tag "Atualizar", class: "btn btn-default" %>
+<% end %>
