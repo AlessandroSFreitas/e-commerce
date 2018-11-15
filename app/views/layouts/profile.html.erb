@@ -26,9 +26,12 @@
           <li>
             <a href="#"><%= link_to t("profile_menu.dashboard"), site_profile_dashboard_index_path %></a>
           </li>
-            <li>
-                <a href="#"><%= link_to t("profile_menu.my_ads"), site_profile_ads_path %></a>
-            </li>
+          <li>
+            <a href="#"><%= link_to t("profile_menu.my_ads"), site_profile_ads_path %></a>
+          </li>
+          <li>
+            <a href="#"><%= link_to t("profile_menu.new_ad"), new_site_profile_ad_path %></a>
+          </li>
         </ul>
       </div>
       <div id="page-content-wrapper">
@@ -38,5 +41,10 @@
       </div>
     </div>
     <%= render partial: 'layouts/site_shared/footer' %>
+    <% if notice %>
+      <script>
+        $.notify("<%= notice %>", "success");
+      </script>
+    <% end %>
   </body>
 </html>

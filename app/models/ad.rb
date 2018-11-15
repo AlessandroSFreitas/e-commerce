@@ -2,6 +2,8 @@ class Ad < ApplicationRecord
   belongs_to :category, optional: true
   belongs_to :member, optional: true
 
+  validates_presence_of :title, :description, :category, :price #, :picture
+
   scope :descending_order, ->(quantity = 12) { limit(quantity).order(created_at: :desc) }
   scope :to_the, ->(member) { where(member_id: member.id) }
 
