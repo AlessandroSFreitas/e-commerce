@@ -13,6 +13,9 @@
           <li class="nav-item">
             <%= link_to "Entre", new_member_session_path, class:"nav-link" %>
           </li>
+          <li class="nav-item">
+            <%= link_to "Admin?", backoffice_path, class:"nav-link" %>
+          </li>
         <% else %>
           <li class="nav-item">
             <%= link_to current_member.email, "#", class:"nav-link" %>
