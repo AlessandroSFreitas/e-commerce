@@ -58,6 +58,8 @@ gem 'lerolero_generator'
 gem 'money-rails'
 # Easy file attachment management for ActiveRecord C:\Program Files\ImageMagick-7.0.8-Q16\images
 gem 'paperclip'
+# jQuery UI's JavaScript, CSS, and image files packaged for the Rails 3.1+ asset pipeline
+gem 'jquery-ui-rails'
 
 source 'https://rails-assets.org' do
   # Bootstrap
