@@ -1,7 +1,7 @@
-# rake mock:generate_mock
+# rake db:mock
 
-namespace :mock do
-  task generate_mock: :environment do
+namespace :db do
+  task mock: :environment do
 
     puts "Cadastrando o Administrador padrão..."
 
@@ -88,8 +88,7 @@ namespace :mock do
         description: LeroleroGenerator.paragraph([1,2,3].sample),
         member: Member.first,
         category: Category.all.sample,
-        price: "#{Random.rand(500)},#{Random.rand(99)}",
-        finish_date: Date.today + Random.rand(90)
+        price: "#{Random.rand(500)},#{Random.rand(99)}"
         # picture: File.new(Rails.root.join('public', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
       )
     end
@@ -100,8 +99,7 @@ namespace :mock do
         description: LeroleroGenerator.paragraph([1,2,3].sample),
         member: Member.all.sample,
         category: Category.all.sample,
-        price: "#{Random.rand(500)},#{Random.rand(99)}",
-        finish_date: Date.today + Random.rand(90)
+        price: "#{Random.rand(500)},#{Random.rand(99)}"
         # picture: File.new(Rails.root.join('public', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
       )
     end
