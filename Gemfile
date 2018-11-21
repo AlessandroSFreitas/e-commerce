@@ -60,6 +60,8 @@ gem 'money-rails'
 gem 'paperclip'
 # jQuery UI's JavaScript, CSS, and image files packaged for the Rails 3.1+ asset pipeline
 gem 'jquery-ui-rails'
+# A fast, safe and extensible Markdown to (X)HTML parser
+gem 'redcarpet'
 
 source 'https://rails-assets.org' do
   # Bootstrap
