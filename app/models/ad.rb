@@ -1,8 +1,11 @@
 class Ad < ApplicationRecord
+  # Callback
+  before_save :markdown_to_html
+
   belongs_to :category, optional: true
   belongs_to :member, optional: true
 
-  validates :title, :description, :category, presence: true #, :picture
+  validates :title, :description_md, :description_short, :category, presence: true #, :picture
   validates :price, numericality: { greater_than: 0 }
 
   scope :descending_order, ->(quantity = 12) { limit(quantity).order(created_at: :desc) }
@@ -12,4 +15,26 @@ class Ad < ApplicationRecord
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
 
   monetize :price_cents
+
+  private
+
+  def markdown_to_html
+    options = {
+      filter_html: true,
+      link_attributes: {
+        rel: "nofollow",
+        target: "_blank"
+      }
+    }
+
+    extensions = {
+    space_after_headers: true,
+    autolink: true
+    }
+
+    renderer = Redcarpet::Render::HTML.new(options)
+    markdown = Redcarpet::Markdown.new(renderer, extensions)
+
+    self.description = markdown.render(self.description_md)
+  end
 end
