@@ -62,6 +62,8 @@ gem 'paperclip'
 gem 'jquery-ui-rails'
 # A fast, safe and extensible Markdown to (X)HTML parser
 gem 'redcarpet'
+# FriendlyId is the "Swiss Army bulldozer" of slugging and permalink plugins for Active Record
+gem 'friendly_id'
 
 source 'https://rails-assets.org' do
   # Bootstrap
