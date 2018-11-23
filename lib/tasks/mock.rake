@@ -86,6 +86,7 @@ namespace :db do
       Ad.create!(
         title: Faker::Lorem.sentence([2,3,4,5].sample),
         description: LeroleroGenerator.paragraph([1,2,3].sample),
+        description_md: Faker::Lorem.sentence([1,2,3].sample),
         description_short: Faker::Lorem.sentence([2,3].sample),
         member: Member.first,
         category: Category.all.sample,
@@ -98,6 +99,7 @@ namespace :db do
       Ad.create!(
         title: Faker::Lorem.sentence([2,3,4,5].sample),
         description: LeroleroGenerator.paragraph([1,2,3].sample),
+        description_md: Faker::Lorem.sentence([1,2,3].sample),
         description_short: Faker::Lorem.sentence([2,3].sample),
         member: Member.all.sample,
         category: Category.all.sample,

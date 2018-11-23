@@ -2,7 +2,7 @@ class Ad < ApplicationRecord
   # Callback
   before_save :markdown_to_html
 
-  belongs_to :category, optional: true
+  belongs_to :category, counter_cache: true
   belongs_to :member, optional: true
 
   validates :title, :description_md, :description_short, :category, presence: true #, :picture
@@ -10,6 +10,7 @@ class Ad < ApplicationRecord
 
   scope :descending_order, ->(quantity = 12) { limit(quantity).order(created_at: :desc) }
   scope :to_the, ->(member) { where(member_id: member.id) }
+  scope :list_for_categories, ->(id) { where(category: id) }
 
   has_attached_file :picture, styles: { large: "900x400#", medium: "286x258#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
