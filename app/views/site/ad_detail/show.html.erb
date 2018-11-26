@@ -5,7 +5,7 @@
         <%= image_tag @ad.picture.url(:large), class: "card-img-top img-fluid" %>
         <div class="card-body">
           <h3 class="card-title"><%= @ad.title %></h3>
-          <h4>R$ <%= @ad.price %></h4>
+          <h4><%= t('app.money') %> <%= @ad.price %></h4>
           <p class="card-text"><%= @ad.description.html_safe %></p>
           <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
           4.0 stars
@@ -22,7 +22,7 @@
               Opinar sobre produto
             </button>
           <% else %>
-            <button type="button" class="btn btn-success" disabled="disabled" data-toggle="modal" data-target="#commentModal">
+            <button type="button" class="btn btn-success" disabled="disabled" data-toggle="tooltip" data-placement="bottom" title="Para opinar você precisa estar logado." data-toggle="modal" data-target="#commentModal">
               Opinar sobre produto
             </button>
           <% end %>
