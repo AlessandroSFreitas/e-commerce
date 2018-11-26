@@ -17,7 +17,7 @@ class Ad < ApplicationRecord
 
   scope :list_for_categories, ->(id) { where(category: id) }
 
-  scope :search, ->(term) { where("lower(title) ILIKE ?", "%#{term.downcase}%").page(page).per(QUANTITY_PER_PAGE) }
+  scope :search, ->(term, page) { where("lower(title) ILIKE ?", "%#{term.downcase}%").page(page).per(QUANTITY_PER_PAGE) }
 
   has_attached_file :picture, styles: { large: "900x400#", medium: "286x258#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
