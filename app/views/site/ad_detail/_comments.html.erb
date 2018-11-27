@@ -2,6 +2,8 @@
   <p><%= comment.body %></p>
   <small class="text-muted"><%= comment.member.email %> <%= comment.created_at %></small>
   <br>
-  <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+  <% if comment.member.id == current_member.id %>
+  	<%= rating_for_user @ad, current_member, 'quality', star: 10 %>
+  <% end %>
   <hr>
 <% end %>

@@ -1,6 +1,8 @@
 class Ad < ApplicationRecord
   QUANTITY_PER_PAGE = 12
 
+  ratyrate_rateable 'quality'
+
   # Callback
   before_save :markdown_to_html
 
