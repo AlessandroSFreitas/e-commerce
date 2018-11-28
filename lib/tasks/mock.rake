@@ -130,3 +130,21 @@ namespace :db do
 
   end
 end
+
+namespace :production do
+  task mock: :environment do
+
+    puts "Cadastrando o Administrador padrão..."
+
+    Admin.create!(
+      name: "Administrador geral",
+      email: "admin@admin.com",
+      password: "123456",
+      password_confirmation: "123456",
+      role: 0
+    )
+
+    puts "Adminstrador cadastrado com sucesso!"
+
+  end
+end
