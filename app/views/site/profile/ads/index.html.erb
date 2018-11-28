@@ -15,9 +15,7 @@
       <tr>
         <th scope="row"><%= ad.id %></th>
         <td>
-          <% if ad.picture.present? %>
-            <%= image_tag ad.picture(:thumb) %>
-          <% end %>
+          <%= image_tag ad.picture(:thumb) %>
         </td>
         <td><%= ad.title %></td>
         <td>R$ <%= ad.price %></td>
